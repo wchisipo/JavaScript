@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Validation</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet"> 
 
 
     <!-- Bootstrap -->
@@ -21,8 +20,22 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <div class="container">
-        <header class="display-6 mt-5 mb-5 text-center">VCC Application Form</header>
+    <div id="navbar" class="">
+        <div class="logo">
+            <a href="#">
+                <img src="images/logo.png" alt="Eight2Five Logo">
+            </a>
+        </div>
+        <ul id="nav-links">
+            <li><a href="#">Pillars</a></li>
+            <li><a href="#">Milestones</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">blog</a></li>
+        </ul>
+    </div>
+    <div class="container content">
+        <h2 class="display-6 mt-5 mb-5 text-center">VCC Application Form</h2>
         <form action="" id="form">
 
             <!-- PERSONAL DETAILS -->
@@ -75,7 +88,7 @@
                             <option value="creativeEconomies">Creative Economies</option>
                             <option value="emergingTechnology">Emerging Technology</option>
                         </select>
-                        <div class="error-hint mt-2 hidden" id="errorHint"></div>
+                        <div class="error-hint mt-2 hidden"></div>
                     </div>
                 </div>
             </div>
@@ -138,7 +151,7 @@
     
                 <div class="mt-3">
                     <label for="customerAcqusition" class="form-label">How do you acquire customers?</label>
-                    <textarea class="form-control txtArea" aria-label="With textarea" id="customerAcqusition" placeholder="We want to get a feel for how they think about distribution and there are ways we can leverage our relationship with Old Mutual to help with distribution"></textarea>
+                    <textarea class="form-control txtArea" aria-label="With textarea" id="customerAcqusition" placeholder="We want to get a feel for how they think about distribution and there are ways we can leverage our relationship with Old Mutual to help with distribution."></textarea>
                     <div class="error-hint hidden"></div>
                 </div>
     
@@ -172,7 +185,7 @@
                     placeholder="We’ll use this information to measure:
 *If they are telling the truth about long they have been around for
 *If they are telling the truth about the number of customers they claim to have
-*Are they Marketing / Branding savvy
+*Are they Marketing / Branding savvy.
                     "></textarea>
                     <div class="error-hint hidden"></div>
                 </div>
@@ -181,17 +194,11 @@
                     <textarea class="form-control txtArea" aria-label="With textarea" id="additional" placeholder="Perhaps they can still change our minds if they haven’t made a good first impression in earlier responses."></textarea>
                     <div class="error-hint hidden"></div>
                 </div>
-    
-                <!-- <div class="mt-3">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea class="form-control message" aria-label="With textarea" id="message2" placeholder="Message"></textarea>
-                    <div class="error-hint hidden"></div>
-                </div> -->
             </div>
 
             <div class="col"  id="buttons">
-                <button class="btn btn-primary mt-3  col-2 " type="submit">submit</button>
-                <button type="reset" class="btn btn-danger mt-3  col-2 ">Cancel</button>
+                <button class="btn btn-success mt-3  col-2" type="submit">submit</button>
+                <button type="reset" class="btn btn-danger mt-3  col-2">Cancel</button>
             </div>
         </form>
         <div class="mt-5" id="apps"></div>

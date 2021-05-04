@@ -1,14 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,500&display=swap');
+/*primary: #0069D9;
+success: #218838;
+danger: #C82333;
+*/
+
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    font-size: 12px;
+    font-weight: 400;
+    color: #444;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
 }
 
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    padding: 10px 120px;
+}
+#navbar.sticky{
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 2px 2px 4px #444;
+    padding: 5px 120px;
+}
+#nav-links{
+    list-style: none;
+    padding: 0;
+}
+#nav-links li{
+    display: inline-block;
+    text-align: center;
+}
+
+#nav-links a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color: #444;
+    padding: 8px 20px;
+    font-size: 11pt;
+    font-weight: 600;
+    transition: .5s;
+    display: block;
+    border-radius: 5px;
+}
+#navbar a:hover{
+    color: #fff;
+    background: #218838;
+}
+
+#navbar.sticky a{
+    padding: 5px 15px;
+    font-size: 10pt;
+}
+
+.content{
+    margin-top: 100px;
+}
+.top-header{
+    border-bottom: 1px solid#ccc;
+    width: 100%;
+}
+.logo img{
+    width: 100px;
+    transition:.3s;
+}
+#navbar.sticky .logo img{
+    width: 80px;
+}
+.display-6{
+    font-weight: 400;
+}
 #errorHint, .error-hint{
     color: #f00;
     font-style: italic;
+    font-weight: 400;
     display: block;
 }
 .hidden {
@@ -31,7 +107,25 @@ textarea{
     align-items: center;
 }
 #buttons > button{
+    text-transform: capitalize;
     max-width: 100px;
     box-sizing: border-box;
+    border-radius: 5px;
+    transition: .3s all ease-in-out;
 }
 
+#buttons button:first-child,
+#buttons button:last-child,
+label, h4{
+    font-weight: 600;
+}
+#buttons > button:first-child{
+    background-color: #28a745;
+    border: none;
+    outline: none;
+    overflow: hidden;
+}
+
+#buttons > button:first-child:hover{
+    background-color:#0e7e28;
+}

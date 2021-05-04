@@ -50,7 +50,6 @@ inputTxtMessages.forEach((inputMsg) => {inputs.push(inputMsg);});
 
 let valid = false;
 let isValidOn = false;
-let errorHint = _id("#errorHint");
 
 function resetElem(elem){
 	elem.classList.remove("invalid");
@@ -161,4 +160,10 @@ inputs.forEach((element) => {
         if (!isValidOn) return;
         resetElem(element);
     });
+});
+
+// Navbar
+window.addEventListener("scroll", () => {
+    const navbar = _id("#navbar");
+    navbar.classList.toggle("sticky", scrollY > 0);
 });
